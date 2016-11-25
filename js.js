@@ -5,7 +5,8 @@ var game = function(canvas){
   this.canvas = canvas;
   console.log ("Game I N I A T E");
   this.ctx = this.canvas.getContext('2d');
-  this.init()
+  this.init();
+  this.draw();
 }
 
 game.prototype.init = function(){
@@ -17,7 +18,13 @@ game.prototype.init = function(){
 game.prototype.keyDown = function(e){
 
   console.log(e.keyCode);
-  this.ctx.fillStyle = "black"
-  this.ctx.fillRect(0,0,200,200)
+  //this.ctx.fillStyle = "black"
+  //this.ctx.fillRect(0,0,200,200)
 
+}
+
+game.prototype.draw = function(){
+
+  this.ctx.fillStyle = "#0099ff";
+  this.ctx.fillRect(110,100,40,40);
 }

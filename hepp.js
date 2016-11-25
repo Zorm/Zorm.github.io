@@ -1,3 +1,7 @@
+
+
+//All of this is copied text for the atari text, it's hella rad.
+
 window.addEventListener("load", eventWindowLoaded, false);
 function eventWindowLoaded() {
 

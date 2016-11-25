@@ -59,7 +59,7 @@ function canvasApp() {
 			drawScreen()
 	}
 	var colorStops = new Array(
-	{color:"#FF0000", stopPercent:0},
+	{color:"#FFf000", stopPercent:0},
 	{color:"#FFFF00", stopPercent:.125},
 	{color:"#00FF00", stopPercent:.375},
 	{color:"#0000FF", stopPercent:.625},

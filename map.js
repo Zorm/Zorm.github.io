@@ -33,8 +33,16 @@ map.prototype.draw = function(){
   }.bind(this));
 }
 
+ /*var imageObj = new Image();
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 69, 50);
+      };
+      imageObj.src = 'tilea4.png'; */
+
 map.prototype.drawTile = function(tile, x, y){
   var color = "grey";
+  this.imageObj = new Image();
+
   switch(tile){
     case 0:
       color = "yellow"
@@ -71,7 +79,13 @@ map.prototype.drawTile = function(tile, x, y){
 	  break;
   }
   this.ctx.fillStyle = color;
-  this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
+  this.imageObj.src = 'tilea4.png';
+  this.imageObj.onload = function() {
+        this.ctx.drawImage(this.imageObj, 69, 50);
+      };
+      
+
+  //this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
   //console.log(x);
   //console.log(y);
   //console.log(tile);

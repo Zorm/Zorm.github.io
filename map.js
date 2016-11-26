@@ -16,7 +16,7 @@ map.prototype.draw = function(){
 }
 
 map.prototype.drawTile = function(tile, x, y){
-  var color = "white";
+  var color = "grey";
   switch(tile){
     case 0:
       color = "yellow"
@@ -34,7 +34,7 @@ map.prototype.drawTile = function(tile, x, y){
       color = "white"
       break;
     case 5:
-      color = "blue"
+      color = "black"
       break;
 //    case 6:
 //      color = "orange"
@@ -42,9 +42,9 @@ map.prototype.drawTile = function(tile, x, y){
   }
   this.ctx.fillStyle = color;
   this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
-  console.log(x);
-  console.log(y);
-  console.log(tile);
-  console.log(this.tileSize);
-  console.log("done!")
+  //console.log(x);
+  //console.log(y);
+  //console.log(tile);
+  //console.log(this.tileSize);
+  //console.log("done!")
 }

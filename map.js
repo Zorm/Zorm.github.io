@@ -41,8 +41,9 @@ map.prototype.draw = function(){
 
 map.prototype.drawTile = function(tile, x, y){
   var color = "grey";
-  var imageObj = new Image();
+  this.imageObj = new Image();
 	this.imageObj.src = 'tilea4.png';
+
   switch(tile){
     case 0:
       color = "yellow"
@@ -62,28 +63,28 @@ map.prototype.drawTile = function(tile, x, y){
     case 5:
       color = "black"
       break;
-   case 6:
+    case 6:
       color = "purple"
-	  break;
-	case 7:
+	    break;
+	  case 7:
       color = "cyan"
-	  break;
-	case 8:
+	    break;
+	  case 8:
       color = "brown"
-	  break;
-	case 9:
+	    break;
+    case 9:
       color = "green"
-	  break;
+      break;
 	case 10:
       color = "orange"
 	  break;
   }
   this.ctx.fillStyle = color;
-  
+  this.imageObj.src = 'tilea4.png';
   this.imageObj.onload = function() {
         this.ctx.drawImage(this.imageObj, 69, 50);
-      };
-      
+      }.bind(this);
+
 
   //this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
   //console.log(x);

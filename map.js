@@ -41,8 +41,13 @@ map.prototype.draw = function(){
 
 map.prototype.drawTile = function(tile, x, y){
   var color = "grey";
+<<<<<<< HEAD
   this.imageObj = new Image();
 	this.imageObj.src = 'tilea4.png';
+=======
+  var imageObj = new Image();
+	
+>>>>>>> origin/master
   switch(tile){
     case 0:
       color = "yellow"
@@ -79,7 +84,11 @@ map.prototype.drawTile = function(tile, x, y){
 	  break;
   }
   this.ctx.fillStyle = color;
+<<<<<<< HEAD
 
+=======
+  this.imageObj.src = 'tilea4.png';
+>>>>>>> origin/master
   this.imageObj.onload = function() {
         this.ctx.drawImage(this.imageObj, 69, 50);
       }.bind(this);

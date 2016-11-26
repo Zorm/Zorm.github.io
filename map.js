@@ -36,9 +36,21 @@ map.prototype.drawTile = function(tile, x, y){
     case 5:
       color = "black"
       break;
-//    case 6:
-//      color = "orange"
-//    break;
+   case 6:
+      color = "purple"
+	  break;
+	case 7:
+      color = "cyan"
+	  break;
+	case 8:
+      color = "brown"
+	  break;
+	case 9:
+      color = "green"
+	  break;
+	case 10:
+      color = "orange"
+	  break;
   }
   this.ctx.fillStyle = color;
   this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);

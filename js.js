@@ -25,6 +25,6 @@ game.prototype.keyDown = function(e){
 
 game.prototype.draw = function(){
 
-  this.ctx.fillStyle = "#0099ff";
+  this.ctx.fillStyle = "yellow";
   this.ctx.fillRect(110,100,40,40);
 }

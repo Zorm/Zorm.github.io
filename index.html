@@ -36,13 +36,17 @@
     [0,1,2,3,4,5,6,7,8,9,10],
     [0,1,2,3,4,5,6,7,8,9,10],
     [0,1,2,3,4,5,6,7,8,9,10],
-    [0,1,2,3,4,5,6,7,8,9,10],
+    [0,1,2,3,4,5,6,7,8,9,10]
   ]
+  var item = {x:5,y:5};
   var canvas = document.getElementById('canvasOne')
   var xylophone = new game(canvas);
+
   console.table(xylophone);
   var m = new map(karta, 50, xylophone.ctx);
+  m.addItem(item);
   m.draw();
+  m.drawItems();
 </script>
 </body>
 </html>

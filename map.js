@@ -5,6 +5,24 @@ var map = function(mapData, tileSize, ctx){
   this.mapData = mapData;
   this.tileSize = tileSize;
   this.ctx = ctx;
+  this.items = [];
+  this.itemOffSet = 5;
+  this.itemSize = 40;
+}
+
+map.prototype.addItem = function(item){
+  this.items.push(item);
+}
+
+map.prototype.drawItems = function(){
+  this.items.forEach(function(item){
+    this.drawItem(item);
+  }.bind(this));
+}
+
+map.prototype.drawItem = function(item){
+  this.ctx.fillStyle = "magenta";
+  this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
 }
 
 map.prototype.draw = function(){

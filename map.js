@@ -20,21 +20,31 @@ map.prototype.drawTile = function(tile, x, y){
   switch(tile){
     case 0:
       color = "yellow"
+      break;
     case 1:
       color = "red"
+      break;
     case 2:
       color = "green"
+      break;
     case 3:
       color = "blue"
+      break;
     case 4:
       color = "white"
+      break;
     case 5:
       color = "blue"
+      break;
 //    case 6:
 //      color = "orange"
+//    break;
   }
   this.ctx.fillStyle = color;
   this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
+  console.log(x);
+  console.log(y);
   console.log(tile);
   console.log(this.tileSize);
+  console.log("done!")
 }

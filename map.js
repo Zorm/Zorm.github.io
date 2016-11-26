@@ -47,37 +47,37 @@ map.prototype.drawTile = function(tile, x, y){
 
   switch(tile){
     case 0:
-      tiles = [0*64, 32+(0*128)]
+      tiles = [0*64, 32+(0*160)]
       break;
     case 1:
-      tiles = [1*64, 32+(0*128)]
+      tiles = [1*64, 32+(0*160)]
       break;
     case 2:
-      tiles = [2*64, 32+(0*128)]
+      tiles = [2*64, 32+(0*160)]
       break;
     case 3:
-      tiles = [3*64, 32+(0*128)]
+      tiles = [3*64, 32+(0*160)]
       break;
     case 4:
-      tiles = [4*64, 32+(0*128)]
+      tiles = [4*64, 32+(0*160)]
       break;
     case 5:
-      tiles = [5*64, 32+(0*128)]
+      tiles = [5*64, 32+(0*160)]
       break;
     case 6:
-      tiles = [6*64, 32+(0*128)]
+      tiles = [6*64, 32+(0*160)]
 	    break;
 	  case 7:
-      tiles = [7*64, 32+(0*128)]
+      tiles = [7*64, 32+(0*160)]
 	    break;
 	  case 8:
-      tiles = [0*64, 32+(1*128)]
+      tiles = [0*64, 32+(1*160)]
 	    break;
     case 9:
-      tiles = [1*64, 32+(1*128)]
+      tiles = [1*64, 32+(1*160)]
       break;
 	  case 10:
-      tiles = [2*64, 32+(2*128)]
+      tiles = [2*64, 32+(2*160)]
 	  break;
   }
 

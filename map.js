@@ -40,52 +40,53 @@ map.prototype.draw = function(){
       imageObj.src = 'tilea4.png'; */
 
 map.prototype.drawTile = function(tile, x, y){
-  var color = "grey";
+  //var color = "grey";
   this.imageObj = new Image();
 	this.imageObj.src = 'tilea4.png';
+  var tiles = [];
 
   switch(tile){
     case 0:
-      color = "yellow"
+      tiles = [0*64, 32+(0*128)]
       break;
     case 1:
-      color = "red"
+      tiles = [1*64, 32+(0*128)]
       break;
     case 2:
-      color = "green"
+      tiles = [2*64, 32+(0*128)]
       break;
     case 3:
-      color = "blue"
+      tiles = [3*64, 32+(0*128)]
       break;
     case 4:
-      color = "white"
+      tiles = [4*64, 32+(0*128)]
       break;
     case 5:
-      color = "black"
+      tiles = [5*64, 32+(0*128)]
       break;
     case 6:
-      color = "purple"
+      tiles = [6*64, 32+(0*128)]
 	    break;
 	  case 7:
-      color = "cyan"
+      tiles = [7*64, 32+(0*128)]
 	    break;
 	  case 8:
-      color = "brown"
+      tiles = [0*64, 32+(1*128)]
 	    break;
     case 9:
-      color = "green"
+      tiles = [1*64, 32+(1*128)]
       break;
-	case 10:
-      color = "orange"
+	  case 10:
+      tiles = [2*64, 32+(2*128)]
 	  break;
   }
-  this.ctx.fillStyle = color;
+
   this.imageObj.src = 'tilea4.png';
   this.imageObj.onload = function() {
-        this.ctx.drawImage(this.imageObj, 69, 50);
-      }.bind(this);
+    this.ctx.drawImage(this.imageObj, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
+  }.bind(this);
 
-
+  //this.ctx.fillStyle = color;
   //this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
   //console.log(x);
   //console.log(y);

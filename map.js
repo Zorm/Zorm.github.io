@@ -1,13 +1,19 @@
 
 
 
-var map = function(mapData, tileSize, ctx){
+var map = function(mapData, tileSize, ctx, cb){
   this.mapData = mapData;
   this.tileSize = tileSize;
   this.ctx = ctx;
   this.items = [];
   this.itemOffSet = 5;
   this.itemSize = 40;
+
+  this.imageObj = new Image();
+  this.imageObj.src = 'tilea4.png';
+  this.imageObj.onload = function() {
+    cb();
+  }.bind(this);
 }
 
 map.prototype.addItem = function(item){
@@ -41,8 +47,7 @@ map.prototype.draw = function(){
 
 map.prototype.drawTile = function(tile, x, y){
   //var color = "grey";
-  this.imageObj = new Image();
-	this.imageObj.src = 'tilea4.png';
+
   var tiles = [];
 
   switch(tile){
@@ -81,10 +86,7 @@ map.prototype.drawTile = function(tile, x, y){
 	  break;
   }
 
-  this.imageObj.src = 'tilea4.png';
-  this.imageObj.onload = function() {
-    this.ctx.drawImage(this.imageObj, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
-  }.bind(this);
+  this.ctx.drawImage(this.imageObj, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
 
   //this.ctx.fillStyle = color;
   //this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);

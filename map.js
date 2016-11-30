@@ -7,7 +7,7 @@ var map = function(mapData, tileSize, ctx, cb){
   this.ctx = ctx;
   this.items = [];
   this.itemOffSet = 5;
-  this.itemSize = 40;
+  this.itemSize = 54;
 
   this.imageObj = new Image();
   this.imageObj.src = 'tilea4.png';

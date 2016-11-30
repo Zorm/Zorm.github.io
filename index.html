@@ -44,7 +44,7 @@
   var canvas = document.getElementById('canvasOne')
   var xylophone = new game(canvas);
   console.table(xylophone);
-  var m = new map(karta, 50, xylophone.ctx, function(){
+  var m = new map(karta, 64, xylophone.ctx, function(){
     m.addItem(item);
     m.draw();
     m.drawItems();

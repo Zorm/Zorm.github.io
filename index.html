@@ -20,6 +20,9 @@
 <script src="map.js">
 </script>
 
+<script src="gestalter.js">
+</script>
+
 
 <script>
   var karta = [
@@ -41,13 +44,15 @@
   ];
 
   var item = {x:7,y:5};
+  var g = new gestalter(6, 6, "boss")
   var canvas = document.getElementById('canvasOne')
   var xylophone = new game(canvas);
   console.table(xylophone);
   var m = new map(karta, 64, xylophone.ctx, function(){
     m.addItem(item);
+    m.addGestalt(g);
     m.draw();
-    m.drawItems();
+    m.drawStuff();
   });
 </script>
 

@@ -6,6 +6,7 @@ var map = function(mapData, tileSize, ctx, cb){
   this.tileSize = tileSize;
   this.ctx = ctx;
   this.items = [];
+  this.gestalter = [];
   this.itemOffSet = 5;
   this.itemSize = 54;
 
@@ -14,20 +15,33 @@ var map = function(mapData, tileSize, ctx, cb){
   this.imageObj.onload = function() {
     cb();
   }.bind(this);
+
 }
 
 map.prototype.addItem = function(item){
   this.items.push(item);
 }
 
-map.prototype.drawItems = function(){
+map.prototype.addGestalt = function(gestalter){
+  this.items.push(gestalter);
+}
+
+map.prototype.drawStuff = function(){
   this.items.forEach(function(item){
     this.drawItem(item);
+  }.bind(this));
+  this.gestalter.forEach(function(gestalter){
+    this.drawGestalt(gestalter);
   }.bind(this));
 }
 
 map.prototype.drawItem = function(item){
   this.ctx.fillStyle = "magenta";
+  this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
+}
+
+map.prototype.drawGestalt = function(gestalter){
+  this.ctx.fillStyle = "blue";
   this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
 }
 

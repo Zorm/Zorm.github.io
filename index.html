@@ -4,10 +4,16 @@
 <h1>Hello it's me</h1>
 <p>I'm hosted with GitHub Pages.</p>
 
-<canvas id="canvasOne" height="704" width="1250">
-</canvas>
+<div style="display:flex;flex-direction:row">
+  <canvas id="canvasOne" height="704" width="1000">
+  </canvas>
+  <div id="buttons" style="padding:10px;border:">
+    <button id="button1">Foo</button>
+  </div>
+  <div id="info" style="padding:10px;border:1px solid black;display:none">
 
-
+  </div>
+</div>
 
 <!--
 <script src="hepp.js">
@@ -58,9 +64,18 @@
     m.draw();
     m.drawStuff();
     requestAnimationFrame(frame); // request the next frame
-}
+  }
 
   requestAnimationFrame(frame); // start the first frame
+
+  var b1 = document.getElementById('button1')
+  var onButton1Click = function(e)
+  {
+    var info = document.getElementById('info')
+    info.style.display = 'block';
+    info.innerHTML = "MERHABA";
+  }
+  b1.addEventListener('click', onButton1Click)
 </script>
 
 

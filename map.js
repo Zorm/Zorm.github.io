@@ -23,7 +23,7 @@ map.prototype.addItem = function(item){
 }
 
 map.prototype.addGestalt = function(gestalter){
-  this.items.push(gestalter);
+  this.gestalter.push(gestalter);
 }
 
 map.prototype.drawStuff = function(){
@@ -42,7 +42,7 @@ map.prototype.drawItem = function(item){
 
 map.prototype.drawGestalt = function(gestalter){
   this.ctx.fillStyle = "blue";
-  this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
+  this.ctx.fillRect((gestalter.x*this.tileSize)+this.itemOffSet, (gestalter.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
 }
 
 map.prototype.draw = function(){

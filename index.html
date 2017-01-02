@@ -46,7 +46,7 @@
   var item = {x:7,y:5};
   var g = new gestalter(6, 6, "boss")
   var canvas = document.getElementById('canvasOne')
-  var xylophone = new game(canvas);
+  var xylophone = new game(canvas, g);
   console.table(xylophone);
   var m = new map(karta, 64, xylophone.ctx, function(){
     m.addItem(item);
@@ -54,6 +54,13 @@
     m.draw();
     m.drawStuff();
   });
+  function frame() {
+    m.draw();
+    m.drawStuff();
+    requestAnimationFrame(frame); // request the next frame
+}
+
+  requestAnimationFrame(frame); // start the first frame
 </script>
 
 

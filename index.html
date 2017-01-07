@@ -13,7 +13,7 @@
     		<button id="button4">Fum</button>
   		</div>
   </div>
- 
+
 
   <canvas id="canvasOne" height="704" width="1000">
   </canvas>
@@ -34,44 +34,33 @@
 <script src="gestalter.js">
 </script>
 
+<script src="resourceMngr.js">
+</script>
 
 <script>
-  var karta = [
-/*1*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*2*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*3*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*3*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*4*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*5*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*6*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*7*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*8*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*9*/   [0,1,2,3,4,5,6,7,8,9,10],
-/*10*/  [0,1,2,3,4,5,6,7,8,9,10],
-/*12*/  [0,1,2,3,4,5,6,7,8,9,10],
-/*13*/  [0,1,2,3,4,5,6,7,8,9,10],
-/*14*/  [0,1,2,3,4,5,6,7,8,9,10],
-/*15*/  [0,1,2,3,4,5,6,7,8,9,10]
-  ];
+  var r = new resourceMngr();
+  r.loadResource("https://zorm.github.io/karta.json", function(_karta){
+    var karta = JSON.parse(_karta);
+    //console.log(karta);
+    var item = {x:7,y:5};
+    var g = new gestalter(6, 6, "boss")
+    var canvas = document.getElementById('canvasOne')
+    var xylophone = new game(canvas, g);
+    console.table(xylophone);
+    var m = new map(karta, 64, xylophone.ctx, function(){
+      m.addItem(item);
+      m.addGestalt(g);
+      m.draw();
+      m.drawStuff();
+    });
+    function frame() {
+      m.draw();
+      m.drawStuff();
+      requestAnimationFrame(frame); // request the next frame
+    }
+    requestAnimationFrame(frame); // start the first frame
+  })
 
-  var item = {x:7,y:5};
-  var g = new gestalter(6, 6, "boss")
-  var canvas = document.getElementById('canvasOne')
-  var xylophone = new game(canvas, g);
-  console.table(xylophone);
-  var m = new map(karta, 64, xylophone.ctx, function(){
-    m.addItem(item);
-    m.addGestalt(g);
-    m.draw();
-    m.drawStuff();
-  });
-  function frame() {
-    m.draw();
-    m.drawStuff();
-    requestAnimationFrame(frame); // request the next frame
-  }
-
-  requestAnimationFrame(frame); // start the first frame
 
   var b1 = document.getElementById('button1')
   var onButton1Click = function(e)

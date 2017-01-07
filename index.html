@@ -5,12 +5,15 @@
 <p>I'm hosted with GitHub Pages.</p>
 
 <div style="display:flex;flex-direction:row">
-  <div id="info" style="padding:10px;border:1px solid black;width:320px;">
-		<p> MERHABA </p>
+  <div id="info" style="padding:10px;border:1px solid black;width:460px;">
+		 <div id="buttons" style="padding:10px;border:">
+    		<button id="button1">Fee</button>
+    		<button id="button2">Fi</button>
+    		<button id="button3">Fo</button>
+    		<button id="button4">Fum</button>
+  		</div>
   </div>
-  <div id="buttons" style="padding:10px;border:">
-    <button id="button1">Foo</button>
-  </div>
+ 
 
   <canvas id="canvasOne" height="704" width="1000">
   </canvas>
@@ -78,6 +81,36 @@
 
   }
   b1.addEventListener('click', onButton1Click)
+
+
+  var b2 = document.getElementById('button1')
+  var onButton1Click = function(e)
+  {
+    var info = document.getElementById('info')
+    info.style.display = 'block';
+
+  }
+  b2.addEventListener('click', onButton1Click)
+
+
+  var b3 = document.getElementById('button1')
+  var onButton1Click = function(e)
+  {
+    var info = document.getElementById('info')
+    info.style.display = 'block';
+
+  }
+  b3.addEventListener('click', onButton1Click)
+
+
+  var b4 = document.getElementById('button1')
+  var onButton1Click = function(e)
+  {
+    var info = document.getElementById('info')
+    info.style.display = 'block';
+
+  }
+  b4.addEventListener('click', onButton1Click)
 </script>
 
 

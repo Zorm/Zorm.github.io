@@ -96,8 +96,47 @@ map.prototype.drawTile = function(tile, x, y){
       tiles = [1*64, 32+(1*160)]
       break;
 	  case 10:
-      tiles = [2*64, 32+(2*160)]
+      tiles = [2*64, 32+(1*160)]
 	  break;
+    case 11:
+      tiles = [3*64, 32+(1*160)]
+    break;
+    case 12:
+      tiles = [4*64, 32+(1*160)]
+    break;
+    case 13:
+      tiles = [5*64, 32+(1*160)]
+    break;
+    case 14:
+      tiles = [6*64, 32+(1*160)]
+    break;
+    case 15:
+      tiles = [7*64, 32+(1*160)]
+    break;
+    case 16:
+      tiles = [0*64, 32+(2*160)]
+    break;
+    case 17:
+      tiles = [1*64, 32+(2*160)]
+    break;
+    case 18:
+      tiles = [2*64, 32+(2*160)]
+    break;
+    case 19:
+      tiles = [3*64, 32+(2*160)]
+    break;
+    case 20:
+      tiles = [4*64, 32+(2*160)]
+    break;
+    case 21:
+      tiles = [5*64, 32+(2*160)]
+    break;
+    case 22:
+      tiles = [6*64, 32+(2*160)]
+    break;
+    case 23:
+      tiles = [7*64, 32+(2*160)]
+    break;
   }
 
   this.ctx.drawImage(this.imageObj, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);

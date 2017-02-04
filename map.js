@@ -2,7 +2,8 @@
 
 
 var map = function(mapData, tileSize, ctx, cb){
-  this.mapData = mapData;
+  this.map = mapData;
+  this.mapData = mapData.map;
   this.tileSize = tileSize;
   this.ctx = ctx;
   this.items = [];

@@ -42,13 +42,17 @@
 <script>
   var r = new resourceMngr();
   r.loadResource("https://zorm.github.io/metaMap.json", function(world){
-    var karta = wolrd.maps[0];
-    //console.log(karta);
+    var karta = world.maps[0];
+    console.log('karta is...');
+    console.dir(karta);
     var item = {x:7,y:5};
     var canvas = document.getElementById('canvasOne')
     var xylophone = new game(canvas);
-    console.table(xylophone);
+    console.log('game is');
+    console.dir(xylophone);
     var m = new map(karta, 64, xylophone.ctx, function(){
+      console.log('map manager is');
+      console.dir(m);
       var g = new gestalter(6, 6, "boss", m)
       xylophone.setPlayer(g);
       m.addItem(item);

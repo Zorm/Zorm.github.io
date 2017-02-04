@@ -41,8 +41,8 @@
 
 <script>
   var r = new resourceMngr();
-  r.loadResource("https://zorm.github.io/metaMap.json", function(_karta){
-    var karta = JSON.parse(_karta);
+  r.loadResource("https://zorm.github.io/metaMap.json", function(world){
+    var karta = wolrd.maps[0];
     //console.log(karta);
     var item = {x:7,y:5};
     var canvas = document.getElementById('canvasOne')

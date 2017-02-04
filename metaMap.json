@@ -1,0 +1,15 @@
+{
+  maps:[
+    {
+      name:"map1",
+      events:[
+        {
+          x:5,
+          y:6,
+          text:"Tjosan"
+        }],
+      "url":"https://zorm.github.io/karta.json"
+    }
+  ]
+
+}

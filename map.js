@@ -4,6 +4,7 @@
 var map = function(mapData, tileSize, ctx, cb){
   this.map = mapData;
   this.mapData = mapData.map;
+  this.events = mapData.events;
   this.tileSize = tileSize;
   this.ctx = ctx;
   this.items = [];
@@ -17,6 +18,14 @@ var map = function(mapData, tileSize, ctx, cb){
     cb();
   }.bind(this);
 
+}
+
+map.prototype.onEvent = function(event)
+{
+  console.log('map.js got event ');
+  console.dir(event);
+  var textFil = document.getElementById('info')
+  textFil.innerHTML= event.text;
 }
 
 map.prototype.addItem = function(item){

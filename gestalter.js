@@ -35,4 +35,10 @@ gestalter.prototype.move = function(dir){
 		}
 		break
 	}
+	this.map.events.forEach(function(event)
+	{
+		if (this.x == event.x && this.y == event.y){
+			this.map.onEvent(event);
+		}
+	}.bind(this))	
 }

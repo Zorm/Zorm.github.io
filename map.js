@@ -48,7 +48,7 @@ map.prototype.drawGestalt = function(gestalter){
 map.prototype.draw = function(){
   this.mapData.forEach(function(row, y){
     row.forEach(function(tile, x){
-      this.drawTile(tile, y, x);
+      this.drawTile(tile, x, y);
     }.bind(this));
   }.bind(this));
 }

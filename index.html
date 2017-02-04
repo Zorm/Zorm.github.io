@@ -12,7 +12,7 @@
     		<button id="button2">Fi</button>
     		<button id="button3">Fo</button>
     		<button id="button4">Fum</button>
-    		
+
   		</div>
   </div>
 
@@ -45,11 +45,12 @@
     var karta = JSON.parse(_karta);
     //console.log(karta);
     var item = {x:7,y:5};
-    var g = new gestalter(6, 6, "boss")
     var canvas = document.getElementById('canvasOne')
-    var xylophone = new game(canvas, g);
+    var xylophone = new game(canvas);
     console.table(xylophone);
     var m = new map(karta, 64, xylophone.ctx, function(){
+      var g = new gestalter(6, 6, "boss", m)
+      xylophone.setPlayer(g);
       m.addItem(item);
       m.addGestalt(g);
       m.draw();

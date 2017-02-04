@@ -1,12 +1,16 @@
 
 
-var game = function(canvas, player){
-  this.player = player;
+var game = function(canvas){
+
   this.canvas = canvas;
   console.log ("Game I N I A T E");
   this.ctx = this.canvas.getContext('2d');
   this.init();
   this.draw();
+}
+
+game.prototype.setPlayer = function(player){
+  this.player = player;  
 }
 
 game.prototype.init = function(){

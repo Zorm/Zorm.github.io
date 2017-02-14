@@ -62,9 +62,10 @@
     });
     function frame() {
       m.draw();
-      m.drawStuff();
-	    window.setTimeout(frame,0);
-      //requestAnimationFrame(frame); // request the next frame
+      m.drawStuff();	
+	//Ottos kod
+	//window.setTimeout(frame,0);
+      requestAnimationFrame(frame); // request the next frame
     }
     requestAnimationFrame(frame); // start the first frame
   })

@@ -63,7 +63,8 @@
     function frame() {
       m.draw();
       m.drawStuff();
-      requestAnimationFrame(frame); // request the next frame
+	    window.setTimeout(frame,0);
+      //requestAnimationFrame(frame); // request the next frame
     }
     requestAnimationFrame(frame); // start the first frame
   })

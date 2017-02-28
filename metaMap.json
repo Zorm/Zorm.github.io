@@ -8,7 +8,8 @@
         {
           "x":5,
           "y":6,
-          "text":"Tjosanxyz"
+          "text":"Tjosanxyz",
+          "alternativ":"Haha"
         }
       ],
       "url":"https://zorm.github.io/karta.json"

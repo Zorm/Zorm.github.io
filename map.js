@@ -20,6 +20,8 @@ var map = function(mapData, tileSize, ctx, cb){
 
 }
 
+//Event shit here!
+
 map.prototype.onEvent = function(event)
 {
   console.log('map.js got event ');
@@ -27,6 +29,8 @@ map.prototype.onEvent = function(event)
   var textFil = document.getElementById('info')
   textFil.innerHTML= event.text;
 }
+
+//No more event shit!
 
 map.prototype.addItem = function(item){
   this.items.push(item);

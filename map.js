@@ -30,6 +30,7 @@ map.prototype.onEvent = function(event)
   textFil.innerHTML= event.text;
 }
 
+//Add diplayAlternativ här(typ)!
 //No more event shit!
 
 map.prototype.addItem = function(item){

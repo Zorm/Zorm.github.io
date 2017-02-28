@@ -9,7 +9,21 @@
           "x":5,
           "y":6,
           "text":"Tjosanxyz",
-          "alternativ":"Haha"
+          "alternativ":
+          [
+            {
+              "text":"foo", action: 0, "alternativ":
+              [
+
+              ]
+            },
+            {
+              "text":"foo", action: 1, "alternativ": []
+            },
+            {
+              "text":"foo", action: 2, "alternativ": []
+            }
+          ]
         }
       ],
       "url":"https://zorm.github.io/karta.json"

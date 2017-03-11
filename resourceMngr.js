@@ -17,6 +17,7 @@ resourceMngr.prototype.loadResource = function(resource, cb){
 
 resourceMngr.prototype.parseMetaData = function(_data, cb){
   var world = {maps:[]};
+  console.log(_data);
   var data = JSON.parse(_data);
   var count = data.maps.length
   data.maps.forEach(function(_map)

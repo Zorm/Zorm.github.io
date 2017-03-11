@@ -18,10 +18,10 @@
               ]
             },
             {
-              "text":"foo", action: 1, "alternativ": []
+              "text":"bar", action: 1, "alternativ": []
             },
             {
-              "text":"foo", action: 2, "alternativ": []
+              "text":"baz", action: 2, "alternativ": []
             }
           ]
         }

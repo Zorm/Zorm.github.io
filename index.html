@@ -41,7 +41,8 @@
 
 <script>
   var r = new resourceMngr();
-  r.loadResource("https://zorm.github.io/metaMap.json", function(world){
+  //r.loadResource("https://zorm.github.io/metaMap.json", function(world){
+  r.loadResource("metaMap.json", function(world){
     var karta = world.maps[0];
     console.log('karta is...');
     console.dir(karta);
@@ -62,7 +63,7 @@
     });
     function frame() {
       m.draw();
-      m.drawStuff();	
+      m.drawStuff();
 	//Ottos kod
 	//window.setTimeout(frame,0);
       requestAnimationFrame(frame); // request the next frame

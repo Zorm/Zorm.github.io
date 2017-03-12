@@ -30,13 +30,10 @@ map.prototype.onEvent = function(event)
   textFil.innerHTML= event.text;
 
   //forEach(events.alternativ.)
-  var forEach(events.alternativ){
-    console.log(alternativ);
-};
-  events.alternativ.forEach(function(event){
-    
+  events.alternativ.forEach(function(event,i){
+    console.log("element":i);
+    console.dir(event);
   })
-
 }
 
 //Add diplayAlternativ här(typ)!

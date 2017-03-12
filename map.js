@@ -35,7 +35,11 @@ map.prototype.onEvent = function(event)
     var createButton = document.createElement('button');
     createButton.innerHTML = e.text;
     textFil.appendChild(createButton)
-        
+
+    createButton.addEventListener('click', function(){
+      console.log("Button"+i+"clicked!")
+      
+    })
   })
 }
 

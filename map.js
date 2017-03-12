@@ -29,10 +29,13 @@ map.prototype.onEvent = function(event)
   var textFil = document.getElementById('info')
   textFil.innerHTML= event.text;
 
-  //forEach(events.alternativ.)
   event.alternativ.forEach(function(e,i){
     console.log("element"+i);
     console.dir(e);
+    var createButton = document.createElement('button');
+    createButton.innerHTML = e.text;
+    textFil.appendChild(createButton)
+        
   })
 }
 

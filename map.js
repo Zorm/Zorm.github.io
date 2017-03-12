@@ -31,7 +31,7 @@ map.prototype.onEvent = function(event)
 
   //forEach(events.alternativ.)
   events.alternativ.forEach(function(event,i){
-    console.log("element":i);
+    console.log("element"+i);
     console.dir(event);
   })
 }

@@ -29,6 +29,9 @@ map.prototype.onEvent = function(event)
   var textFil = document.getElementById('info')
   textFil.innerHTML= event.text;
   //forEach(events.alternativ.)
+  var forEach(events.alternativ){
+    console.log(alternativ);
+};
 }
 
 //Add diplayAlternativ här(typ)!

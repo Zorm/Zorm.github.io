@@ -37,12 +37,12 @@ map.prototype.onEvent = function(event)
     textFil.appendChild(createButton)
        createButton.addEventListener('click', function(){
       console.log("Button"+i+"clicked!")
-      
+      if (e.events = true) {onEvent (e.events)};
     })
         
   })
 }
-if (e.events = true) {onEvent (e.events)};
+
 //Add diplayAlternativ här(typ)!
 //No more event shit!
 

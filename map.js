@@ -30,9 +30,9 @@ map.prototype.onEvent = function(event)
   textFil.innerHTML= event.text;
 
   //forEach(events.alternativ.)
-  events.alternativ.forEach(function(event,i){
+  event.alternativ.forEach(function(e,i){
     console.log("element"+i);
-    console.dir(event);
+    console.dir(e);
   })
 }
 

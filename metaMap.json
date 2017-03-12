@@ -12,16 +12,16 @@
           "alternativ":
           [
             {
-              "text":"foo", "action": 0, "alternativ":
+              "text":"foo", "action": 0, "events":
               [
 
               ]
             },
             {
-              "text":"bar", "action": 1, "alternativ": []
+              "text":"bar", "action": 1, "events": []
             },
             {
-              "text":"baz", "action": 2, "alternativ": []
+              "text":"baz", "action": 2, "events": []
             }
           ]
         }

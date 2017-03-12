@@ -28,6 +28,7 @@ map.prototype.onEvent = function(event)
   console.dir(event);
   var textFil = document.getElementById('info')
   textFil.innerHTML= event.text;
+  
 }
 
 //Add diplayAlternativ här(typ)!

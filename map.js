@@ -40,7 +40,7 @@ map.prototype.onEvent = function(event)
       if (e.events = true) this.onEvent(e.events);
     }.bind(this))
 
-  })
+  }.bind(this))
 }
 
 //Add diplayAlternativ här(typ)!

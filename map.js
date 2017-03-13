@@ -38,7 +38,7 @@ map.prototype.onEvent = function(event)
      createButton.addEventListener('click', function(){
       console.log("Button"+i+"clicked!")
       if (e.events = true) this.onEvent(e.events);
-    })
+    }.bind(this))
 
   })
 }

@@ -13,9 +13,11 @@
           [
             {
               "text":"foo", "action": 0, "events":
-              [{
-                "text":"You did it Tristan!"
-              }]
+              [
+                {
+                  "text":"You did it Tristan!"
+                }
+              ]
             },
             {
               "text":"bar", "action": 1, "events": []

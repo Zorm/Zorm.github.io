@@ -28,19 +28,20 @@ map.prototype.onEvent = function(event)
   console.dir(event);
   var textFil = document.getElementById('info')
   textFil.innerHTML= event.text;
+  if(event.alternativ){
+    event.alternativ.forEach(function(e,i){
+      console.log("element"+i);
+      console.dir(e);
+      var createButton = document.createElement('button');
+      createButton.innerHTML = e.text;
+      textFil.appendChild(createButton)
+       createButton.addEventListener('click', function(){
+        console.log("Button"+i+"clicked!")
+        if (e.events) this.onEvent(e.events);
+      }.bind(this))
 
-  event.alternativ.forEach(function(e,i){
-    console.log("element"+i);
-    console.dir(e);
-    var createButton = document.createElement('button');
-    createButton.innerHTML = e.text;
-    textFil.appendChild(createButton)
-     createButton.addEventListener('click', function(){
-      console.log("Button"+i+"clicked!")
-      if (e.events) this.onEvent(e.events);
     }.bind(this))
-
-  }.bind(this))
+  }
 }
 
 //Add diplayAlternativ här(typ)!

@@ -1,12 +1,13 @@
 
 
 
-var map = function(mapData, tileSize, ctx, cb){
+var map = function(mapData, tileSize, game, cb){
   this.map = mapData;
   this.mapData = mapData.map;
   this.events = mapData.events;
   this.tileSize = tileSize;
-  this.ctx = ctx;
+  this.game = game
+  this.ctx = game.ctx;
   this.items = [];
   this.gestalter = [];
   this.itemOffSet = 5;
@@ -49,16 +50,16 @@ map.prototype.onEvent = function(event)
 }
 
 map.prototype.addKeyItem = function(item){
-  g.inventory.push(item);
+  this.game.player.inventory.push(item);
   console.log(item+"has been added to inventory!")
 }
 
 map.prototype.doAThing = function(i)
 {
   switch(i){
-    case 0:
+    case 1:
       var key = []
-      addKeyItem(key)
+      this.addKeyItem(key)
     break;
   }
 }

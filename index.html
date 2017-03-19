@@ -49,7 +49,7 @@
     var xylophone = new game(canvas);
     console.log('game is');
     console.dir(xylophone);
-    var m = new map(karta, 64, xylophone.ctx, function(){
+    var m = new map(karta, 64, xylophone, function(){
       console.log('map manager is');
       console.dir(m);
       var g = new gestalter(6, 6, "boss", m)

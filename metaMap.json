@@ -13,16 +13,16 @@
           "alternativ":
           [
             {
-              "text":"foo", "action": 0, "event":
+              "text":"foo", "action": 1, "event":
                 {
                   "text":"You did it Tristan!", "alternativ":[]
                 }
             },
             {
-              "text":"bar", "action": 1, "event":{}
+              "text":"bar", "action": 2, "event":{}
             },
             {
-              "text":"baz", "action": 2, "event":{}
+              "text":"baz", "action": 3, "event":{}
             }
           ]
 

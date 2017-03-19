@@ -51,7 +51,7 @@ map.prototype.onEvent = function(event)
 
 map.prototype.addKeyItem = function(item){
   this.game.player.inventory.push(item);
-  console.log(item+"has been added to inventory!")
+  console.log(item+" has been added to inventory!")
 }
 
 map.prototype.doAThing = function(i)

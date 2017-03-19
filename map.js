@@ -24,7 +24,7 @@ var map = function(mapData, tileSize, game, cb){
   this.imageObj = new Image();
   this.imageObj.src = 'tilea4.png';
   this.imageItem = new Image();
-  this.imageItem.src = 'img.sprites_RPG_icons.png';
+  this.imageItem.src = 'img/sprites_RPG_icons.png';
 
   this.imageObj.onload = function() {
     checkFinish();
@@ -77,7 +77,7 @@ map.prototype.drawBackpack = function(){
   this.game.player.inventory.forEach(function(item){
     var img = document.createElement('img');
     img.src = imageItem;
-    img.style.background = "url('img.sprites_RPG_icons.png') "+item[0]+" "+item[1];
+    img.style.background = "url('img/sprites_RPG_icons.png') "+item[0]+" "+item[1];
   })
 }
 map.prototype.doAThing = function(i)

@@ -89,7 +89,7 @@ map.prototype.doAThing = function(i)
 {
   switch(i){
     case 1:
-      var key = [34*4, 34*7]
+      var key = [34*5, 34*7]
       this.addKeyItem(key)
     break;
   }

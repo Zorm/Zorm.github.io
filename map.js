@@ -13,10 +13,25 @@ var map = function(mapData, tileSize, game, cb){
   this.itemOffSet = 5;
   this.itemSize = 54;
 
+  var imagestoload = 2
+  var checkFinish = function()
+  {
+    if (--imagestoload == 0)
+    {
+      cb()
+    }
+  }
   this.imageObj = new Image();
   this.imageObj.src = 'tilea4.png';
+  this.imageItem = new Image();
+  this.imageItem.src = 'img.sprites_RPG_icons.png';
+
   this.imageObj.onload = function() {
-    cb();
+    checkFinish();
+  }.bind(this);
+
+  this.imageItem.onload = function() {
+    checkFinish();
   }.bind(this);
 
 }
@@ -28,7 +43,7 @@ map.prototype.onEvent = function(event)
   console.log('map.js got event ');
   console.dir(event);
   var textFil = document.getElementById('info')
-  textFil.innerHTML= event.text;
+  textFil.innerHTML = event.text;
   if(event.alternativ){
     event.alternativ.forEach(function(e,i){
       console.log("element"+i);
@@ -51,9 +66,20 @@ map.prototype.onEvent = function(event)
 
 map.prototype.addKeyItem = function(item){
   this.game.player.inventory.push(item);
+
   console.log(item+" has been added to inventory!")
+
 }
 
+map.prototype.drawBackpack = function(){
+  var backpack = document.getElementById('backpack')
+  backpack.innerHTML = "";
+  this.game.player.inventory.forEach(function(item){
+    var img = document.createElement('img');
+    img.src = imageItem;
+    img.style.background = "url('img.sprites_RPG_icons.png') "+item[0]+" "+item[1];
+  })
+}
 map.prototype.doAThing = function(i)
 {
   switch(i){

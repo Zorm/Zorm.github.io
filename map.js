@@ -56,7 +56,8 @@ map.prototype.doAThing = function(i)
     case 0:
       var key = []
       addKeyItem(key)
-      break;
+    break;
+  }
 }
 //No more event shit!
 

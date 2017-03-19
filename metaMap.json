@@ -6,26 +6,26 @@
       "events":
       [
         {
+
           "x":5,
           "y":6,
           "text":"Tjosanxyz",
           "alternativ":
           [
             {
-              "text":"foo", "action": 0, "events":
-              [
+              "text":"foo", "action": 0, "event":
                 {
-                  "text":"You did it Tristan!"
+                  "text":"You did it Tristan!", "alternativ":[]
                 }
-              ]
             },
             {
-              "text":"bar", "action": 1, "events": []
+              "text":"bar", "action": 1, "event":{}
             },
             {
-              "text":"baz", "action": 2, "events": []
+              "text":"baz", "action": 2, "event":{}
             }
           ]
+
         }
       ],
       "url":"https://zorm.github.io/karta.json"

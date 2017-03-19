@@ -68,7 +68,7 @@ map.prototype.addKeyItem = function(item){
   this.game.player.inventory.push(item);
 
   console.log(item+" has been added to inventory!")
-
+  this.drawBackpack();
 }
 
 map.prototype.drawBackpack = function(){

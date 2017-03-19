@@ -78,7 +78,9 @@ map.prototype.drawBackpack = function(){
     var img = document.createElement('div');
     img.style.width = '32px';
     img.style.height = '32px';
-    img.style.background = "url('img/sprites_RPG_icons.png') "+item[0]+" "+item[1];
+    var bg = "url('img/sprites_RPG_icons.png') "+item[0]+" "+item[1];
+    console.log(bg);
+    img.style.background = bg;
     backpack.appendChild(img);
   })
 }

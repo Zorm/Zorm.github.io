@@ -75,8 +75,9 @@ map.prototype.drawBackpack = function(){
   var backpack = document.getElementById('backpack')
   backpack.innerHTML = "";
   this.game.player.inventory.forEach(function(item){
-    var img = document.createElement('img');
-    img.src = this.imageItem.src;
+    var img = document.createElement('div');
+    img.style.width = '32px';
+    img.style.height = '32px';
     img.style.background = "url('img/sprites_RPG_icons.png') "+item[0]+" "+item[1];
     backpack.appendChild(img);
   })

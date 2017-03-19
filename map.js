@@ -39,7 +39,7 @@ map.prototype.onEvent = function(event)
         console.log("Button"+i+"clicked!")
         if (e.action){
           console.log("Lights! Camera! Action!")
-          this.doAThing(e.action); console;
+          this.doAThing(e.action);
         }
         if (e.event) this.onEvent(e.event);
       }.bind(this))

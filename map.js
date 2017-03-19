@@ -37,6 +37,7 @@ map.prototype.onEvent = function(event)
       textFil.appendChild(createButton)
        createButton.addEventListener('click', function(){
         console.log("Button"+i+"clicked!")
+        if (e.action) this.doAThing.(e.action);
         if (e.event) this.onEvent(e.event);
       }.bind(this))
 
@@ -44,7 +45,18 @@ map.prototype.onEvent = function(event)
   }
 }
 
-//Add diplayAlternativ här(typ)!
+map.prototype.addKeyItem = function(item){
+  g.inventory.push(item);
+  console.log(item+"has been added to inventory!")
+}
+
+map.prototype.doAThing = function(i)
+{
+  switch(i){
+    case 0:
+      addKeyItem(var key = [])
+      break;
+}
 //No more event shit!
 
 map.prototype.addItem = function(item){
@@ -89,7 +101,6 @@ map.prototype.draw = function(){
       imageObj.src = 'tilea4.png'; */
 
 map.prototype.drawTile = function(tile, x, y){
-  //var color = "grey";
 
   var tiles = [];
 

@@ -37,7 +37,7 @@ map.prototype.onEvent = function(event)
       textFil.appendChild(createButton)
        createButton.addEventListener('click', function(){
         console.log("Button"+i+"clicked!")
-        if (e.action) this.doAThing.(e.action);
+        if (e.action) this.doAThing(e.action);
         if (e.event) this.onEvent(e.event);
       }.bind(this))
 

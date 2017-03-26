@@ -13,7 +13,7 @@ var map = function(mapData, tileSize, game, cb){
   this.itemOffSet = 5;
   this.itemSize = 54;
 
-  this.items=
+  this.keyItems=
   {
     'key': [34*5, 34*7]
   }
@@ -107,7 +107,7 @@ map.prototype.drawBackpack = function(){
 }
 map.prototype.doAThing = function(i)
 {
-  var key = this.items['key']
+  var key = this.KeyItems['key']
 
   switch(i){
     case 1:

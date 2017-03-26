@@ -64,6 +64,8 @@ map.prototype.onEvent = function(event)
   }
 }
 
+//Backpack troubles here!
+
 map.prototype.addKeyItem = function(item){
   this.game.player.inventory.push(item);
 
@@ -106,6 +108,8 @@ map.prototype.doAThing = function(i)
     break;
   }
 }
+
+//No more backpack troubles!
 //No more event shit!
 
 map.prototype.addItem = function(item){

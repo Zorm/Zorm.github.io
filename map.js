@@ -60,7 +60,9 @@ map.prototype.onEvent = function(event)
         console.log("Button"+i+"clicked!")
         console.dir(e);
         if (e.item){
+          console.log("I'm looking for a item!")
           if (this.isItemInInventory(e.item)){
+            console.log("I found an item!")
             if (e.action){
               console.log("Lights! Camera! Action!")
               this.doAThing(e.action);
@@ -68,10 +70,12 @@ map.prototype.onEvent = function(event)
             if (e.event) this.onEvent(e.event);
           }
           else{
+            console.log("I didn't find an item......")
             this.onEvent(e.failstate);
           }
         }
         else{
+          console.log("I'm not looking for an item!")
           if (e.action){
             console.log("Lights! Camera! Action!")
             this.doAThing(e.action);

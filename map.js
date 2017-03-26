@@ -58,7 +58,6 @@ map.prototype.onEvent = function(event)
       textFil.appendChild(createButton)
        createButton.addEventListener('click', function(){
         console.log("Button"+i+"clicked!")
-        console.dir(e);
         if (e.item)){
           if (e.action){
             console.log("Lights! Camera! Action!")

@@ -71,6 +71,14 @@ map.prototype.addKeyItem = function(item){
   this.drawBackpack();
 }
 
+map.prototype.removeKeyItem = function(item){
+  var index = this.game.player.inventory.indexOf(item)
+  this.game.player.inventory.splice(index, 1);
+
+  console.log(item+" has been removed from inventory!")
+  this.drawBackpack();
+}
+
 map.prototype.drawBackpack = function(){
   var backpack = document.getElementById('backpack')
   backpack.innerHTML = "";
@@ -87,10 +95,14 @@ map.prototype.drawBackpack = function(){
 }
 map.prototype.doAThing = function(i)
 {
+  var key = [34*5, 34*7]
+
   switch(i){
     case 1:
-      var key = [34*5, 34*7]
       this.addKeyItem(key)
+    break;
+    case 2:
+      this.removeKeyItem(key)
     break;
   }
 }

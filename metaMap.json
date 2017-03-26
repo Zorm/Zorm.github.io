@@ -15,14 +15,22 @@
             {
               "text":"foo", "action": 1, "event":
                 {
-                  "text":"You did it Tristan!", "alternativ":[]
+                  "text":"You did it Tristan!", "alternativ":
+                  [
+                    {
+                      "text":"Remove!", "action": 2, "event":
+                        {
+                          "text":"Tristan Sucks!!!!", "alternativ":[]
+                        }
+                    }
+                  ]
                 }
             },
             {
-              "text":"bar", "action": 2, "event":{}
+              "text":"bar", "event":{}
             },
             {
-              "text":"baz", "action": 3, "event":{}
+              "text":"baz", "event":{}
             }
           ]
 

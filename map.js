@@ -58,7 +58,7 @@ map.prototype.onEvent = function(event)
       textFil.appendChild(createButton)
        createButton.addEventListener('click', function(){
         console.log("Button"+i+"clicked!")
-        if (this.game.player.inventory.indexOf(item)){
+        if (e.item)){
           if (e.action){
             console.log("Lights! Camera! Action!")
             this.doAThing(e.action);

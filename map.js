@@ -15,7 +15,7 @@ var map = function(mapData, tileSize, game, cb){
 
   this.keyItems=
   {
-    'key': [34*5, 34*7]
+    'key': { name: "key", row: 34*5, col: 34*7}
   }
 
   var imagestoload = 2
@@ -60,14 +60,23 @@ map.prototype.onEvent = function(event)
         console.log("Button"+i+"clicked!")
         console.dir(e);
         if (e.item){
+          if (this.isItemInInventory(e.item)){
+            if (e.action){
+              console.log("Lights! Camera! Action!")
+              this.doAThing(e.action);
+            }
+            if (e.event) this.onEvent(e.event);
+          }
+          else{
+            this.onEvent(e.failstate);
+          }
+        }
+        else{
           if (e.action){
             console.log("Lights! Camera! Action!")
             this.doAThing(e.action);
           }
           if (e.event) this.onEvent(e.event);
-        }
-        else{
-
         }
       }.bind(this))
 
@@ -76,6 +85,22 @@ map.prototype.onEvent = function(event)
 }
 
 //Backpack troubles here!
+
+map.prototype.isItemInInventory = function(name)
+{
+  var rv = false;
+  if(name)
+  {
+    this.game.player.inventory.forEach(function(el)
+    {
+      if(el.name == name)
+      {
+        rv = true;
+      }
+    })
+  }
+  return rv;
+}
 
 map.prototype.addKeyItem = function(item){
   this.game.player.inventory.push(item);
@@ -99,7 +124,7 @@ map.prototype.drawBackpack = function(){
     var img = document.createElement('div');
     img.style.width = '32px';
     img.style.height = '32px';
-    var bg = "url('img/sprites_RPG_icons.png') -"+item[0]+"px -"+item[1]+"px";
+    var bg = "url('img/sprites_RPG_icons.png') -"+item.row+"px -"+item.col+"px";
     //var bg = "url('img/sprites_RPG_icons.png') -64px 0";
     console.log(bg);
     img.style.background = bg;

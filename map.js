@@ -79,6 +79,7 @@ map.prototype.onEvent = function(event)
           if (e.action){
             console.log("Lights! Camera! Action!")
             this.doAThing(e.action);
+            console.log("Action done!")
           }
           if (e.event) this.onEvent(e.event);
         }

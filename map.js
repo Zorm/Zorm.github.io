@@ -13,6 +13,11 @@ var map = function(mapData, tileSize, game, cb){
   this.itemOffSet = 5;
   this.itemSize = 54;
 
+  this.items=
+  {
+    'key': [34*5, 34*7]
+  }
+
   var imagestoload = 2
   var checkFinish = function()
   {
@@ -53,11 +58,16 @@ map.prototype.onEvent = function(event)
       textFil.appendChild(createButton)
        createButton.addEventListener('click', function(){
         console.log("Button"+i+"clicked!")
-        if (e.action){
-          console.log("Lights! Camera! Action!")
-          this.doAThing(e.action);
+        if (this.game.player.inventory.indexOf(item)){
+          if (e.action){
+            console.log("Lights! Camera! Action!")
+            this.doAThing(e.action);
+          }
+          if (e.event) this.onEvent(e.event);
         }
-        if (e.event) this.onEvent(e.event);
+        else{
+
+        }
       }.bind(this))
 
     }.bind(this))
@@ -97,7 +107,7 @@ map.prototype.drawBackpack = function(){
 }
 map.prototype.doAThing = function(i)
 {
-  var key = [34*5, 34*7]
+  var key = this.items['key']
 
   switch(i){
     case 1:

@@ -27,7 +27,14 @@
                 }
             },
             {
-              "text":"bar", "event":{}
+              "text":"Do you have the key?","item":"key", "event":
+              {
+                "text":"But that's a gun!", "alternativ":[]
+              },
+              "failstate":
+              {
+                "text":"You don't have any keys.....", "alternativ":[]
+              }
             },
             {
               "text":"baz", "event":{}

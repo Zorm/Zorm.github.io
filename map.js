@@ -138,7 +138,7 @@ map.prototype.drawBackpack = function(){
 }
 map.prototype.doAThing = function(i)
 {
-  var key = this.KeyItems['key']
+  var key = this.keyItems['key']
 
   switch(i){
     case 1:

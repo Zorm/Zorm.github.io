@@ -59,7 +59,7 @@ map.prototype.onEvent = function(event)
        createButton.addEventListener('click', function(){
         console.log("Button"+i+"clicked!")
         console.dir(e);
-        if (e.item)){
+        if (e.item){
           if (e.action){
             console.log("Lights! Camera! Action!")
             this.doAThing(e.action);

@@ -48,6 +48,18 @@ var map = function(mapData, tileSize, game, cb){
     checkFinish();
   }.bind(this);
 
+  this.imageItem.onload = function() {
+    checkFinish();
+  }.bind(this);
+
+  this.imageItem.onload = function() {
+    checkFinish();
+  }.bind(this);
+
+  this.imageItem.onload = function() {
+    checkFinish();
+  }.bind(this);
+
 //No longer loading images!
 
 }

@@ -182,7 +182,8 @@ map.prototype.drawStuff = function(){
 //}
 
 map.prototype.drawGestalt = function(gestalter){
-  
+    this.ctx.drawImage((gestalter.x*this.tileSize)+this.itemOffSet, (gestalter.y*this.tileSize)+this.itemSize, this.itemSize);
+    this.ctx.drawImage(this.imageGestalter, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
 }
 
 map.prototype.draw = function(){

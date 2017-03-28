@@ -190,6 +190,10 @@ map.prototype.drawGestalt = function(gestalter){
     this.ctx.drawImage(this.imageGestalter, 320, 704, 64, 64, gestalter.x*64, gestalter.y*64, 64, 64);
 }
 
+//Reference!!!!
+//context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
+
+
 map.prototype.draw = function(){
   this.mapData.forEach(function(row, y){
     row.forEach(function(tile, x){

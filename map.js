@@ -18,13 +18,10 @@ var map = function(mapData, tileSize, game, cb){
     'key': { name: "key", row: 34*5, col: 34*7}
   }
 
-<<<<<<< HEAD
+
 //loading images!
 
-  var imagestoload = 2
-=======
   var imagestoload = 5
->>>>>>> origin/master
   var checkFinish = function()
   {
     if (--imagestoload == 0)
@@ -190,7 +187,8 @@ map.prototype.drawStuff = function(){
 //}
 
 map.prototype.drawGestalt = function(gestalter){
-    this.ctx.drawImage(this.imageGestalter,320, 704, 64, 64, x*64, y*64, 64, 64);
+    this.ctx.drawImage((gestalter.x*this.tileSize)+this.itemOffSet, (gestalter.y*this.tileSize)+this.itemSize, this.itemSize);
+    this.ctx.drawImage(this.imageGestalter, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
 }
 
 map.prototype.draw = function(){

@@ -193,10 +193,10 @@ map.prototype.drawStuff = function(){
   }.bind(this));
 }
 
-//map.prototype.drawItem = function(item){
+map.prototype.drawItem = function(item){
  // this.ctx.fillStyle = "magenta";
   //this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
-//}
+}
 
 map.prototype.drawGestalt = function(gestalter){
     this.ctx.drawImage(this.imageGestalter, 320, 704, 64, 64, gestalter.x*64, gestalter.y*64, 64, 64);

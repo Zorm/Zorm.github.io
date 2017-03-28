@@ -21,7 +21,7 @@ var map = function(mapData, tileSize, game, cb){
   var imagestoload = 2
   var checkFinish = function()
   {
-    if (--imagestoload == 0)
+    if (--imagestoload == 1)
     {
       cb()
     }
@@ -30,6 +30,8 @@ var map = function(mapData, tileSize, game, cb){
   this.imageObj.src = 'tilea4.png';
   this.imageItem = new Image();
   this.imageItem.src = 'img/sprites_RPG_icons.png';
+  this.imageGestalter = new Image();
+  this.imageGestalter.src = 'Character.png';
 
   this.imageObj.onload = function() {
     checkFinish();
@@ -170,14 +172,13 @@ map.prototype.drawStuff = function(){
   }.bind(this));
 }
 
-map.prototype.drawItem = function(item){
-  this.ctx.fillStyle = "magenta";
-  this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
-}
+//map.prototype.drawItem = function(item){
+ // this.ctx.fillStyle = "magenta";
+  //this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
+//}
 
 map.prototype.drawGestalt = function(gestalter){
-  this.ctx.fillStyle = "blue";
-  this.ctx.fillRect((gestalter.x*this.tileSize)+this.itemOffSet, (gestalter.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
+  
 }
 
 map.prototype.draw = function(){

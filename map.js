@@ -18,10 +18,10 @@ var map = function(mapData, tileSize, game, cb){
     'key': { name: "key", row: 34*5, col: 34*7}
   }
 
-  var imagestoload = 2
+  var imagestoload = 5
   var checkFinish = function()
   {
-    if (--imagestoload == 1)
+    if (--imagestoload == 0)
     {
       cb()
     }
@@ -32,6 +32,10 @@ var map = function(mapData, tileSize, game, cb){
   this.imageItem.src = 'img/sprites_RPG_icons.png';
   this.imageGestalter = new Image();
   this.imageGestalter.src = 'Character.png';
+  this.imageMob1 = new Image();
+  this.imageMob1.src = 'Zombies1.png';
+  this.imageMob2 = new Image();
+  this.imageMob2.src = 'Zombie2.png';
 
   this.imageObj.onload = function() {
     checkFinish();

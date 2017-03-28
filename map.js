@@ -10,7 +10,7 @@ var map = function(mapData, tileSize, game, cb){
   this.ctx = game.ctx;
   this.items = [];
   this.gestalter = [];
-  this.itemOffSet = 16;
+  this.itemOffSet = 18;
   this.itemSize = 54;
 
   this.keyItems=
@@ -199,7 +199,7 @@ map.prototype.drawItem = function(item){
 }
 
 map.prototype.drawGestalt = function(gestalter){
-    this.ctx.drawImage(this.imageGestalter, 0, 0, 32, 32, (gestalter.x*64)+this.itemOffSet, (gestalter.y*64)+this.itemOffSet, 32, 32);
+    this.ctx.drawImage(this.imageGestalter, 0, 0, 32, 32, (gestalter.x*64)+this.itemOffSet, (gestalter.y*64)+this.itemOffSet, 30, 32);
 }
 
 //Reference!!!!

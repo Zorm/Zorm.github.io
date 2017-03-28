@@ -10,7 +10,7 @@ var map = function(mapData, tileSize, game, cb){
   this.ctx = game.ctx;
   this.items = [];
   this.gestalter = [];
-  this.itemOffSet = 5;
+  this.itemOffSet = 16;
   this.itemSize = 54;
 
   this.keyItems=

@@ -199,7 +199,7 @@ map.prototype.drawItem = function(item){
 }
 
 map.prototype.drawGestalt = function(gestalter){
-    this.ctx.drawImage(this.imageGestalter, 16, 16, 64, 64, (gestalter.x*16)+this.itemOffSet, gestalter.y*16, 64, 64);
+    this.ctx.drawImage(this.imageGestalter, 16, 16, 16, 16, (gestalter.x*64)+this.itemOffSet, gestalter.y*64, 64, 64);
 }
 
 //Reference!!!!

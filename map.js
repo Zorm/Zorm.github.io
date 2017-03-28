@@ -48,15 +48,15 @@ var map = function(mapData, tileSize, game, cb){
     checkFinish();
   }.bind(this);
 
-  this.imageItem.onload = function() {
+  this.imageGestalter.onload = function() {
     checkFinish();
   }.bind(this);
 
-  this.imageItem.onload = function() {
+  this.imageMob1.onload = function() {
     checkFinish();
   }.bind(this);
 
-  this.imageItem.onload = function() {
+  this.imageMob2.onload = function() {
     checkFinish();
   }.bind(this);
 

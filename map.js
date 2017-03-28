@@ -18,6 +18,8 @@ var map = function(mapData, tileSize, game, cb){
     'key': { name: "key", row: 34*5, col: 34*7}
   }
 
+//loading images!
+
   var imagestoload = 2
   var checkFinish = function()
   {
@@ -38,6 +40,8 @@ var map = function(mapData, tileSize, game, cb){
   this.imageItem.onload = function() {
     checkFinish();
   }.bind(this);
+
+//No longer loading images!
 
 }
 

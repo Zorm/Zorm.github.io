@@ -18,9 +18,13 @@ var map = function(mapData, tileSize, game, cb){
     'key': { name: "key", row: 34*5, col: 34*7}
   }
 
+<<<<<<< HEAD
 //loading images!
 
   var imagestoload = 2
+=======
+  var imagestoload = 5
+>>>>>>> origin/master
   var checkFinish = function()
   {
     if (--imagestoload == 0)
@@ -32,6 +36,12 @@ var map = function(mapData, tileSize, game, cb){
   this.imageObj.src = 'tilea4.png';
   this.imageItem = new Image();
   this.imageItem.src = 'img/sprites_RPG_icons.png';
+  this.imageGestalter = new Image();
+  this.imageGestalter.src = 'Character.png';
+  this.imageMob1 = new Image();
+  this.imageMob1.src = 'Zombies1.png';
+  this.imageMob2 = new Image();
+  this.imageMob2.src = 'Zombie2.png';
 
   this.imageObj.onload = function() {
     checkFinish();
@@ -174,14 +184,14 @@ map.prototype.drawStuff = function(){
   }.bind(this));
 }
 
-map.prototype.drawItem = function(item){
-  this.ctx.fillStyle = "magenta";
-  this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
-}
+//map.prototype.drawItem = function(item){
+ // this.ctx.fillStyle = "magenta";
+  //this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
+//}
 
 map.prototype.drawGestalt = function(gestalter){
-  this.ctx.fillStyle = "blue";
-  this.ctx.fillRect((gestalter.x*this.tileSize)+this.itemOffSet, (gestalter.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
+    this.ctx.drawImage((gestalter.x*this.tileSize)+this.itemOffSet, (gestalter.y*this.tileSize)+this.itemSize, this.itemSize);
+    this.ctx.drawImage(this.imageGestalter, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
 }
 
 map.prototype.draw = function(){

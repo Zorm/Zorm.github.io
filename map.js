@@ -299,6 +299,73 @@ map.prototype.drawTile = function(tile, x, y){
     case 24:
       tile = [0*64, 96+(0*160)]
     break;
+    case 25:
+      tiles = [2*64, 96+(0*160)]
+      break;
+    case 26:
+      tiles = [3*64, 96+(0*160)]
+      break;
+    case 27:
+      tiles = [4*64, 96+(0*160)]
+      break;
+    case 28:
+      tiles = [5*64, 96+(0*160)]
+      break;
+    case 29:
+      tiles = [6*64, 96+(0*160)]
+      break;
+    case 30:
+      tiles = [7*64, 96+(0*160)]
+      break;
+    case 31:
+      tiles = [0*64, 96+(1*160)]
+      break;
+    case 32:
+      tiles = [1*64, 96+(1*160)]
+      break;
+    case 33:
+      tiles = [2*64, 96+(1*160)]
+    break;
+    case 34:
+      tiles = [3*64, 96+(1*160)]
+    break;
+    case 35:
+      tiles = [4*64, 96+(1*160)]
+    break;
+    case 36:
+      tiles = [5*64, 96+(1*160)]
+    break;
+    case 37:
+      tiles = [6*64, 96+(1*160)]
+    break;
+    case 38:
+      tiles = [7*64, 96+(1*160)]
+    break;
+    case 39:
+      tiles = [0*64, 96+(2*160)]
+    break;
+    case 40:
+      tiles = [1*64, 96+(2*160)]
+    break;
+    case 41:
+      tiles = [2*64, 96+(2*160)]
+    break;
+    case 42:
+      tiles = [3*64, 96+(2*160)]
+    break;
+    case 43:
+      tiles = [4*64, 96+(2*160)]
+    break;
+    case 44:
+      tiles = [5*64, 96+(2*160)]
+    break;
+    case 45:
+      tiles = [6*64, 96+(2*160)]
+    break;
+    case 46:
+      tiles = [7*64, 96+(2*160)]
+    break;
+
   }
 
 

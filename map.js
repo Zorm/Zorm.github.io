@@ -17,6 +17,7 @@ var map = function(mapData, tileSize, game, cb){
     'key': { name: "key", row: 34*5, col: 34*7}
   }
 
+  this.inEvent = false;
 
 //loading images!
 
@@ -69,36 +70,50 @@ map.prototype.onEvent = function(event)
 {
   console.log('map.js got event ');
   console.dir(event);
+  this.inEvent = true;
   var textFil = document.getElementById('info')
   textFil.innerHTML = event.text;
-  if(event.alternativ){
-    event.alternativ.forEach(function(e,i){
+  if (e.action)
+  {
+    console.log("Lights! Camera! Action!")
+    this.doAThing(e.action);
+    console.log("Action done!")
+  if(event.alternativ)
+  {
+    event.alternativ.forEach(function(e,i)
+    {
       console.log("element"+i);
       console.dir(e);
       var createButton = document.createElement('button');
       createButton.innerHTML = e.text;
       textFil.appendChild(createButton)
-       createButton.addEventListener('click', function(){
+       createButton.addEventListener('click', function()
+       {
         console.log("Button"+i+"clicked!")
         console.dir(e);
-        if (e.item){
+        if (e.item)
+        {
           console.log("I'm looking for a item!")
-          if (this.isItemInInventory(e.item)){
+          if (this.isItemInInventory(e.item))
+          {
             console.log("I found an item!")
-            if (e.action){
+            if (e.action)
+            {
               console.log("Lights! Camera! Action!")
               this.doAThing(e.action);
             }
             if (e.event) this.onEvent(e.event);
           }
-          else{
+          else
+          {
             console.log("I didn't find an item......")
             this.onEvent(e.failstate);
           }
         }
         else{
           console.log("I'm not looking for an item!")
-          if (e.action){
+          if (e.action)
+          {
             console.log("Lights! Camera! Action!")
             this.doAThing(e.action);
             console.log("Action done!")
@@ -168,6 +183,22 @@ map.prototype.doAThing = function(i)
     break;
     case 2:
       this.removeKeyItem(key)
+    break;
+    case 3:
+      this.inEvent = false;
+      this.game.player.move('up')
+    break;
+    case 4:
+      this.inEvent = false;
+      this.game.player.move('left')
+    break;
+    case 5:
+      this.inEvent = false;
+      this.game.player.move('right')
+    break;
+    case 6:
+      this.inEvent = false;
+      this.game.player.move('down')
     break;
   }
 }
@@ -380,4 +411,3 @@ map.prototype.drawTile = function(tile, x, y){
   //console.log(this.tileSize);
   //console.log("done!")
 }
-

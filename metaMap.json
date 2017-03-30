@@ -37,7 +37,10 @@
               }
             },
             {
-              "text":"baz", "event":{}
+              "text":"I wanna leave.", "event":
+              {
+                "text":"Fine. Be that way.", "action":3 
+              }
             }
           ]
 

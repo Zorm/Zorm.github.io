@@ -9,10 +9,16 @@ var gestalter = function(x, y, name, map){
 }
 
 gestalter.prototype.canIMove = function(location){
-	
+	/*map.prototype.draw = function(){
+  this.mapData.forEach(function(row, y){
+    row.forEach(function(tile, x){
+      this.drawTile(tile, x, y);
+    }.bind(this));
+  }.bind(this));
+}*/
 
 
-	
+
 }
 
 

@@ -1,7 +1,7 @@
 
 
 
-var map = function(mapData, tileSize, game, cb, wallSize){
+var map = function(mapData, tileSize, game, cb){
   this.map = mapData;
   this.mapData = mapData.map;
   this.events = mapData.events;
@@ -12,7 +12,6 @@ var map = function(mapData, tileSize, game, cb, wallSize){
   this.gestalter = [];
   this.itemOffSet = 16;
   this.itemSize = 54;
-  this.wallSize = wallSize;
   this.keyItems=
   {
     'key': { name: "key", row: 34*5, col: 34*7}
@@ -312,83 +311,3 @@ map.prototype.drawTile = function(tile, x, y){
   //console.log("done!")
 }
 
-map.prototype.drawWalls = function(Walls, x, y){
-
-  var Walls = [];
-
-  switch(Walls){
-    case 0:
-      Walls = [0*64, 32+(0*160)]
-      break;
-    case 1:
-      Walls = [1*64, 32+(0*160)]
-      break;
-    case 2:
-      Walls = [2*64, 32+(0*160)]
-      break;
-    case 3:
-      Walls = [3*64, 32+(0*160)]
-      break;
-    case 4:
-      Walls = [4*64, 32+(0*160)]
-      break;
-    case 5:
-      Walls = [5*64, 32+(0*160)]
-      break;
-    case 6:
-      Walls = [6*64, 32+(0*160)]
-      break;
-    case 7:
-      Walls = [7*64, 32+(0*160)]
-      break;
-    case 8:
-      Walls = [0*64, 32+(1*160)]
-      break;
-    case 9:
-      Walls = [1*64, 32+(1*160)]
-      break;
-    case 10:
-      Walls = [2*64, 32+(1*160)]
-    break;
-    case 11:
-      Walls = [3*64, 32+(1*160)]
-    break;
-    case 12:
-      Walls = [4*64, 32+(1*160)]
-    break;
-    case 13:
-      Walls = [5*64, 32+(1*160)]
-    break;
-    case 14:
-      Walls = [6*64, 32+(1*160)]
-    break;
-    case 15:
-      Walls = [7*64, 32+(1*160)]
-    break;
-    case 16:
-      Walls = [0*64, 32+(2*160)]
-    break;
-    case 17:
-      Walls = [1*64, 32+(2*160)]
-    break;
-    case 18:
-      Walls = [2*64, 32+(2*160)]
-    break;
-    case 19:
-      Walls = [3*64, 32+(2*160)]
-    break;
-    case 20:
-      Walls = [4*64, 32+(2*160)]
-    break;
-    case 21:
-      Walls = [5*64, 32+(2*160)]
-    break;
-    case 22:
-      Walls = [6*64, 32+(2*160)]
-    break;
-    case 23:
-      Walls = [7*64, 32+(2*160)]
-    break;
-
-    this.ctx.drawImage(this.imageObj, Walls[0], Walls[1], 64, 64, x*64, y*64, 64, 64);
-  }

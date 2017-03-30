@@ -78,6 +78,7 @@ map.prototype.onEvent = function(event)
     console.log("Lights! Camera! Action!")
     this.doAThing(e.action);
     console.log("Action done!")
+  }
   if(event.alternativ)
   {
     event.alternativ.forEach(function(e,i)

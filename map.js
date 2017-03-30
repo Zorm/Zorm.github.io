@@ -312,7 +312,7 @@ map.prototype.drawTile = function(tile, x, y){
   //console.log("done!")
 }
 
-map.prototype.drawWalls = function(tile, x, y){
+map.prototype.drawWalls = function(Walls, x, y){
 
   var Walls = [];
 

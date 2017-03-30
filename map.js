@@ -296,6 +296,9 @@ map.prototype.drawTile = function(tile, x, y){
     case 23:
       tiles = [7*64, 32+(2*160)]
     break;
+    case 24:
+      tile [0*64, 96+(0*160)]
+    break;
   }
 
 

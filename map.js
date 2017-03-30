@@ -21,7 +21,7 @@ var map = function(mapData, tileSize, game, cb){
 
 //loading images!
 
-  var imagestoload = 5
+  var imagestoload = 5;
   var checkFinish = function()
   {
     if (--imagestoload == 0)

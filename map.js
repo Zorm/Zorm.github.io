@@ -73,10 +73,10 @@ map.prototype.onEvent = function(event)
   this.inEvent = true;
   var textFil = document.getElementById('info')
   textFil.innerHTML = event.text;
-  if (e.action)
+  if (event.action)
   {
     console.log("Lights! Camera! Action!")
-    this.doAThing(e.action);
+    this.doAThing(event.action);
     console.log("Action done!")
   }
   if(event.alternativ)

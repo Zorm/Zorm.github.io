@@ -8,6 +8,14 @@ var gestalter = function(x, y, name, map){
 
 }
 
+gestalter.prototype.canIMove = function(location){
+	
+
+
+	
+}
+
+
 gestalter.prototype.move = function(dir){
 	console.log("anropar move: "+ dir);
 	console.dir(this.map);
@@ -42,3 +50,5 @@ gestalter.prototype.move = function(dir){
 		}
 	}.bind(this))	
 }
+
+

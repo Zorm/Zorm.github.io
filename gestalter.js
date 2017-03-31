@@ -1,10 +1,9 @@
 
-var gestalter = function(x, y, name, map){
+var gestalter = function(x, y, name){
 	this.x = x;
 	this.y = y;
 	this.name = name;
 	this.inventory = [];
-	this.map = map;
 
 }
 

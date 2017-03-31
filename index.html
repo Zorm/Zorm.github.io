@@ -39,76 +39,26 @@
 
 <script>
   var r = new resourceMngr();
-  //r.loadResource("https://zorm.github.io/metaMap.json", function(world){
-  r.loadResource("metaMap.json", function(world){
-    var karta = world.maps[0];
-    console.log('karta is...');
-    console.dir(karta);
-    var item = {x:7,y:5};
-    var canvas = document.getElementById('canvasOne')
-    var xylophone = new game(canvas);
-    console.log('game is');
-    console.dir(xylophone);
-    var m = new map(karta, 64, xylophone, function(){
-      console.log('map manager is');
-      console.dir(m);
-      var g = new gestalter(6, 6, "boss", m)
+  r.loadTiles(function(images){
+
+    r.loadResource("metaMap.json", function(world){
+      var karta = world.maps[0];
+      var karta2 = world.maps[1];
+      console.log('karta is...');
+      console.dir(karta);
+      var item = {x:7,y:5};
+      var canvas = document.getElementById('canvasOne')
+      var xylophone = new game(canvas, world, images);
+      console.log('game is');
+      console.dir(xylophone);
+
+
+      var g = new gestalter(6, 6, "boss");
       xylophone.setPlayer(g);
-      m.addItem(item);
-      m.addGestalt(g);
-      m.draw();
-      m.drawStuff();
-    });
-    function frame() {
-      m.draw();
-      m.drawStuff();
-	//Ottos kod
-	//window.setTimeout(frame,0);
-      requestAnimationFrame(frame); // request the next frame
-    }
-    requestAnimationFrame(frame); // start the first frame
-  })
 
-/*
-  var b1 = document.getElementById('button1')
-  var onButton1Click = function(e)
-  {
-    var info = document.getElementById('info')
-    info.style.display = 'block';
+    })
+  });
 
-  }
-  b1.addEventListener('click', onButton1Click)
-
-
-  var b2 = document.getElementById('button1')
-  var onButton1Click = function(e)
-  {
-    var info = document.getElementById('info')
-    info.style.display = 'block';
-
-  }
-  b2.addEventListener('click', onButton1Click)
-
-
-  var b3 = document.getElementById('button1')
-  var onButton1Click = function(e)
-  {
-    var info = document.getElementById('info')
-    info.style.display = 'block';
-
-  }
-  b3.addEventListener('click', onButton1Click)
-
-
-  var b4 = document.getElementById('button1')
-  var onButton1Click = function(e)
-  {
-    var info = document.getElementById('info')
-    info.style.display = 'block';
-
-  }
-  b4.addEventListener('click', onButton1Click)
-  */
 </script>
 
 

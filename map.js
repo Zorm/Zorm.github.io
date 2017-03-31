@@ -1,7 +1,7 @@
 
 
 
-var map = function(mapData, tileSize, game, cb){
+var map = function(mapData, tileSize, game, images){
   this.map = mapData;
   this.mapData = mapData.map;
   this.events = mapData.events;
@@ -12,6 +12,8 @@ var map = function(mapData, tileSize, game, cb){
   this.gestalter = [];
   this.itemOffSet = 16;
   this.itemSize = 54;
+  this.images = images;
+  this.name = mapData.name;
   this.keyItems=
   {
     'key': { name: "key", row: 34*5, col: 34*7}
@@ -19,48 +21,10 @@ var map = function(mapData, tileSize, game, cb){
 
   this.inEvent = false;
 
-//loading images!
 
-  var imagestoload = 5;
-  var checkFinish = function()
-  {
-    if (--imagestoload == 0)
-    {
-      cb()
-    }
-  }
-  this.imageObj = new Image();
-  this.imageObj.src = 'tilea4.png';
-  this.imageItem = new Image();
-  this.imageItem.src = 'img/sprites_RPG_icons.png';
-  this.imageGestalter = new Image();
-  this.imageGestalter.src = 'Character.png';
-  this.imageMob1 = new Image();
-  this.imageMob1.src = 'Zombies1.png';
-  this.imageMob2 = new Image();
-  this.imageMob2.src = 'Zombie2.png';
 
-  this.imageObj.onload = function() {
-    checkFinish();
-  }.bind(this);
-
-  this.imageItem.onload = function() {
-    checkFinish();
-  }.bind(this);
-
-  this.imageGestalter.onload = function() {
-    checkFinish();
-  }.bind(this);
-
-  this.imageMob1.onload = function() {
-    checkFinish();
-  }.bind(this);
-
-  this.imageMob2.onload = function() {
-    checkFinish();
-  }.bind(this);
-
-//No longer loading images!
+  console.log("creating new map...");
+  console.dir(mapData)
 
 }
 
@@ -76,7 +40,7 @@ map.prototype.onEvent = function(event)
   if (event.action)
   {
     console.log("Lights! Camera! Action!")
-    this.doAThing(event.action);
+    this.doAThing(event);
     console.log("Action done!")
   }
   if(event.alternativ)
@@ -101,9 +65,9 @@ map.prototype.onEvent = function(event)
             if (e.action)
             {
               console.log("Lights! Camera! Action!")
-              this.doAThing(e.action);
+              this.doAThing(e);
             }
-            if (e.event) this.onEvent(e.event);
+            if (e.event) this.onEvent(e);
           }
           else
           {
@@ -116,7 +80,7 @@ map.prototype.onEvent = function(event)
           if (e.action)
           {
             console.log("Lights! Camera! Action!")
-            this.doAThing(e.action);
+            this.doAThing(e);
             console.log("Action done!")
           }
           if (e.event) this.onEvent(e.event);
@@ -174,32 +138,38 @@ map.prototype.drawBackpack = function(){
     backpack.appendChild(img);
   })
 }
-map.prototype.doAThing = function(i)
+map.prototype.doAThing = function(event)
 {
   var key = this.keyItems['key']
 
-  switch(i){
-    case 1:
+  switch(event.action){
+    case "addKey":
       this.addKeyItem(key)
     break;
-    case 2:
+    case "removeKey":
       this.removeKeyItem(key)
     break;
-    case 3:
+
+
+    case "exitU":
       this.inEvent = false;
       this.game.player.move('up')
     break;
-    case 4:
+    case "exitL":
       this.inEvent = false;
       this.game.player.move('left')
     break;
-    case 5:
+    case "exitR":
       this.inEvent = false;
       this.game.player.move('right')
     break;
-    case 6:
+    case "exitD":
       this.inEvent = false;
       this.game.player.move('down')
+    break;
+    case "moveMap":
+      this.inEvent = false;
+      this.game.changeMap(event.arg);
     break;
   }
 }
@@ -230,7 +200,8 @@ map.prototype.drawItem = function(item){
 }
 
 map.prototype.drawGestalt = function(gestalter){
-    this.ctx.drawImage(this.imageGestalter, 0, 0, 32, 32, (gestalter.x*64)+this.itemOffSet+4, (gestalter.y*64)+this.itemOffSet, 30, 32);
+
+  this.ctx.drawImage(this.images.characters, 0, 0, 32, 32, (gestalter.x*64)+this.itemOffSet+4, (gestalter.y*64)+this.itemOffSet, 30, 32);
 }
 
 //Reference!!!!
@@ -402,7 +373,7 @@ map.prototype.drawTile = function(tile, x, y){
 
 
 
-  this.ctx.drawImage(this.imageObj, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
+  this.ctx.drawImage(this.images.mapTiles, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
 
   //this.ctx.fillStyle = color;
   //this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);

@@ -174,6 +174,11 @@ map.prototype.doAThing = function(event)
     case "moveMap":
       this.inEvent = false;
       this.game.changeMap(event.arg);
+      if (event.x && event.y)
+      {
+        this.game.player.x = event.x;
+        this.game.player.y = event.y; 
+      }
     break;
   }
 }

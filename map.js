@@ -150,7 +150,6 @@ map.prototype.doAThing = function(event)
       this.removeKeyItem(key)
     break;
 
-
     case "exitU":
       this.inEvent = false;
       this.game.player.move('up')

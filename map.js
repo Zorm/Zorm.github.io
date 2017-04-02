@@ -234,7 +234,7 @@ map.prototype.draw = function(){
 
 map.prototype.drawTile = function(tile, x, y){
 
-var color = "null";
+var color = "";
 
 
   var tiles = [];
@@ -401,7 +401,7 @@ var color = "null";
 
 
 
-  this.ctx.drawImage(this.images.mapTiles, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
+  //this.ctx.drawImage(this.images.mapTiles, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
 
   //this.ctx.fillStyle = color;
   //this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
@@ -410,4 +410,4 @@ var color = "null";
   //console.log(tile);
   //console.log(this.tileSize);
   //console.log("done!")
-}
+

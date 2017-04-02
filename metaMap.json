@@ -26,10 +26,7 @@
         },
         {
 
-          "x":7,
-          "y":0,
-          "text":"Hey, kid.",
-          "alternativ":
+          "x":7, "y":0, "text":"Hey, kid.", "alternativ":
           [
             {
               "text":"Yeah?", "event":
@@ -61,6 +58,18 @@
                     }
                   }
                 ]
+              }
+            },
+            {
+              "text":"Code: map3", "event":
+              {
+                "text":"...... fine, be that way. Your adventure continues.....", "action":"moveMap", "arg":"map3", "x":2, "y":5
+              }
+            },
+            {
+              "text":"Code: map4", "event":
+              {
+                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":2, "y":5
               }
             }
           ]
@@ -119,6 +128,33 @@
         }
       ],
       "url":"karta2.json"
+    },
+    {
+      "name":"map3",
+      "events":
+      [
+        {
+          "x":7, "y":0, "text":"Hey, kid.", "alternativ":
+          [
+
+          ]
+        }
+      ],
+
+      "url":"karta3.json"
+    },
+    {
+      "name":"map4",
+      "events":
+      [
+        {
+          "x":7, "y":0, "text":"Hey, kid.", "alternativ":
+          [
+
+          ]
+        }
+      ],
+      "url":"karta4.json"
     }
   ]
 }

@@ -206,7 +206,7 @@ map.prototype.drawStuff = function(){
 map.prototype.drawItem = function(item){
  // this.ctx.fillStyle = "magenta";
   //this.ctx.fillRect((item.x*this.tileSize)+this.itemOffSet, (item.y*this.tileSize)+this.itemOffSet, this.itemSize, this.itemSize);
-  this.ctx.drawImage(this.images.characters, 0, 0, 32, 32, (item.x*64)+this.itemOffSet+4, (item.y*64)+this.itemOffSet, this.itemSize, this.itemSize);
+  this.ctx.drawImage(this.images.characters, 96, 0, 32, 32, (item.x*64), (item.y*64), this.itemSize, this.itemSize);
 }
 
 map.prototype.drawGestalt = function(gestalter){

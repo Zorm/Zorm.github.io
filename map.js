@@ -230,6 +230,9 @@ map.prototype.draw = function(){
         context.drawImage(imageObj, 69, 50);
       };
       imageObj.src = 'tilea4.png'; */
+color = (null);
+this.ctx.fillStyle = color;
+this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
 
 map.prototype.drawTile = function(tile, x, y){
 
@@ -376,6 +379,13 @@ map.prototype.drawTile = function(tile, x, y){
     break;
     case 46:
       tiles = [7*64, 96+(2*160)]
+    break;
+    case 47:
+    if (color) {}
+
+    else{}
+
+
     break;
 
   }

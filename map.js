@@ -230,11 +230,12 @@ map.prototype.draw = function(){
         context.drawImage(imageObj, 69, 50);
       };
       imageObj.src = 'tilea4.png'; */
-color = (null);
-this.ctx.fillStyle = color;
-this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
+
 
 map.prototype.drawTile = function(tile, x, y){
+
+var color = "null";
+
 
   var tiles = [];
 
@@ -381,12 +382,20 @@ map.prototype.drawTile = function(tile, x, y){
       tiles = [7*64, 96+(2*160)]
     break;
     case 47:
-    if (color) {}
-
-    else{}
-
-
+      color = "black";
     break;
+
+
+
+    }
+    if(color){
+      this.ctx.fillStyle = color;
+      this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
+      }
+
+    else {
+      this.ctx.drawImage(this.images.mapTiles, tiles[0], tiles[1], 64, 64, x*64, y*64, 64, 64);
+        }
 
   }
 

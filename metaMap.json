@@ -109,7 +109,7 @@
             {
               "text":"Okay! Going down!", "event":
               {
-                "text":"Third floor!", "action":"moveMap", "arg":"map3", "x":13, "y":4
+                "text":"Third floor!", "action":"moveMap", "arg":"map3", "x":1, "y":4
               }
             },
             {
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "x":14, "y":4, "text":"Bing bong! Not dialouge, just an elevator!", "alternativ":
+          "x":0, "y":4, "text":"Bing bong! Not dialouge, just an elevator!", "alternativ":
           [
             {
               "text":"Okay! Going up!", "event":

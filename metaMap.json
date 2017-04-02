@@ -69,7 +69,7 @@
             {
               "text":"Code: map4", "event":
               {
-                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":2, "y":5
+                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":6, "y":10
               }
             }
           ]
@@ -181,7 +181,7 @@
             {
               "text":"Code: map4", "event":
               {
-                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":2, "y":5
+                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":7, "y":1
               }
             }
           ]

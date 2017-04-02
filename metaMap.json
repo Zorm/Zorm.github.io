@@ -9,13 +9,13 @@
 
           "x":8, "y":5, "text":"Ahead of you is a large open room, a part of a larger keep seemingly untouched by time. Do You want to enter?", "alternativ":          [
             {
-              "text":"Yes, how have this keep been preserved so well?", "event":
+              "text":"Yes, how has this keep been preserved so well?", "event":
                 {
-                  "text":"Your adventure continues.....", "action":"moveMap", "arg":"map2", "x":2, "y":5
+                  "text":"Oddly cozy though...", "action":"moveMap", "arg":"map2", "x":2, "y":5
                 }
             },
             {
-              "text":"No, it's dusty :/", "event":
+              "text":"No thanks.", "event":
               {
                 "text":"Oh. Okay then.", "action":"exitL"
               }
@@ -62,13 +62,13 @@
             {
               "text":"Code: map3", "event":
               {
-                "text":"...... fine, be that way. Your adventure continues.....", "action":"moveMap", "arg":"map3", "x":2, "y":5
+                "text":"I smell hax boy.", "action":"moveMap", "arg":"map3", "x":2, "y":5
               }
             },
             {
               "text":"Code: map4", "event":
               {
-                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":6, "y":10
+                "text":"Your hax are annoying.", "action":"moveMap", "arg":"map4", "x":6, "y":10
               }
             }
           ]
@@ -89,32 +89,32 @@
           "x":1, "y":5, "text":"Leaving already?", "alternativ":
           [
             {
-              "text":"Yeah, just need some fresh air :)", "event":
+              "text":"Yeah, I have survival instincts.", "event":
                 {
-                  "text":"Oh, ok :)", "action":"moveMap", "arg":"map1", "x":"7", "y":"5"
+                  "text":"You head back outside like the scared weakling you are.", "action":"moveMap", "arg":"map1", "x":"7", "y":"5"
                 }
             },
             {
-              "text":"Heck no, this place is awesome!","event":
+              "text":"I'm too curious to leave...","event":
               {
-                "text":"Cool, just checking, just checking.", "action":"exitR"
+                "text":"Stop being indesicive", "action":"exitR"
               }
             }
           ]
         },
         {
-          "x":14, "y":4, "text":"Bing bong! Not dialouge, just an elevator!", "alternativ":
+          "x":14, "y":4, "text":"There seems to a doorway here, would you look at that...", "alternativ":
           [
             {
-              "text":"Okay! Going down!", "event":
+              "text":"Sure, sounds cool, I'll uh.. just enter private property..", "event":
               {
-                "text":"Third floor!", "action":"moveMap", "arg":"map3", "x":1, "y":4
+                "text":"A wierd room, what could it be used for? Blood censored out because of weaklings.", "action":"moveMap", "arg":"map3", "x":1, "y":4
               }
             },
             {
-              "text":"Wait, isn't that dialouge?", "event":
+              "text":"No thanks, again, I have survival instincts.", "event":
               {
-                "text":".", "action":"exitL"
+                "text":"Smart move, you head back.", "action":"exitL"
               }
             }
           ]
@@ -144,18 +144,18 @@
           ]
         },
         {
-          "x":0, "y":4, "text":"Bing bong! Not dialouge, just an elevator!", "alternativ":
+          "x":0, "y":4, "text":"The door doesn't close behind you for once.. is it really a dungeon? Want to head back?", "alternativ":
           [
             {
-              "text":"Okay! Going up!", "event":
+              "text":"Yeah, this is boring.", "event":
               {
-                "text":"Third floor!", "action":"moveMap", "arg":"map2", "x":13, "y":4
+                "text":"You turn around and head back. Weak. ", "action":"moveMap", "arg":"map2", "x":13, "y":4
               }
             },
             {
-              "text":"Wait, isn't that dialouge?", "event":
+              "text":"Nah, I'll stay, seems cool so far, love what they've done with the place.", "event":
               {
-                "text":".", "action":"exitL"
+                "text":"You stay... again...", "action":"exitR"
               }
             }
           ]
@@ -189,18 +189,35 @@
       "events":
       [
         {
-          "x":7, "y":0, "text":"Hey, kid.", "alternativ":
+          "x":6, "y":10, "text":"You sure you want to keep going? Seems kinda.. odd.. and that dude isn't moving..", "alternativ":
           [
             {
-              "text":"Code: map3", "event":
+              "text":"Yeah, I'm staying, he seems cool.", "event":
               {
-                "text":"...... fine, be that way. Your adventure continues.....", "action":"moveMap", "arg":"map3", "x":2, "y":5
+                "text":"You.. foolhardishly stay... ", "action":"moveMap", "arg":"map4", "x":6, "y":10
               }
             },
             {
-              "text":"Code: map4", "event":
+              "text":"I want to go home again, this is weird and creepy.", "event":
               {
-                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":7, "y":1
+                "text":"Finally you talk sense!", "action":"moveMap", "arg":"map3", "x":6, "y":1
+              }
+            }
+          ]
+        },
+        {
+          "x":6, "y":5, "text":"You did it, you made it past all my traps and you've defeated me! As expected of the Hero! Here is my book, read it and all will be over.", "alternativ":
+          [
+            {
+              "text":"You know what? I want to fall for obvious trap. I'll read it.", "event":
+              {
+                "text":"You read it.. you fool. There is no escape.", "action":"moveMap", "arg":"map1", "x":0, "y":2
+              }
+            },
+            {
+              "text":"Nah, I'm good. I don't like to open random books for people.", "event":
+              {
+                "text":"Too bad you don't have to read it to be stuck here forever...", "action":"moveMap", "arg":"map1", "x":0, "y":2
               }
             }
           ]

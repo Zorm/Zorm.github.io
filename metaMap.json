@@ -136,7 +136,18 @@
         {
           "x":7, "y":0, "text":"Hey, kid.", "alternativ":
           [
-
+            {
+              "text":"Code: map3", "event":
+              {
+                "text":"...... fine, be that way. Your adventure continues.....", "action":"moveMap", "arg":"map3", "x":2, "y":5
+              }
+            },
+            {
+              "text":"Code: map4", "event":
+              {
+                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":2, "y":5
+              }
+            }
           ]
         }
       ],
@@ -150,7 +161,18 @@
         {
           "x":7, "y":0, "text":"Hey, kid.", "alternativ":
           [
-
+            {
+              "text":"Code: map3", "event":
+              {
+                "text":"...... fine, be that way. Your adventure continues.....", "action":"moveMap", "arg":"map3", "x":2, "y":5
+              }
+            },
+            {
+              "text":"Code: map4", "event":
+              {
+                "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":2, "y":5
+              }
+            }
           ]
         }
       ],

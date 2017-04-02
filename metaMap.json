@@ -87,40 +87,18 @@
       "events":
       [
         {
-
-          "x":5,
-          "y":6,
-          "text":"Tjosanxyz",
-          "alternativ":
+          "x":3, "y":5, "text":"Leaving already?", "alternativ":
           [
             {
-              "text":"foo", "action":"addKey", "event":
+              "text":"Yeah, just need some fresh air :)", "event":
                 {
-                  "text":"You did it Tristan!", "alternativ":
-                  [
-                    {
-                      "text":"Remove!", "action":"removeKey", "event":
-                        {
-                          "text":"Tristan Sucks!!!!", "alternativ":[]
-                        }
-                    }
-                  ]
+                  "text":"Oh, ok :)", "action":"moveMap", "arg":"map1", "x":"7", "y":"5"
                 }
             },
             {
-              "text":"Do you have the key?","item":"key", "event":
+              "text":"Heck no, this place is awesome!","event":
               {
-                "text":"But that's a gun!", "alternativ":[]
-              },
-              "failstate":
-              {
-                "text":"You don't have any keys.....", "alternativ":[]
-              }
-            },
-            {
-              "text":"I wanna leave.", "event":
-              {
-                "text":"Fine. Be that way.", "action":"exitL"
+                "text":"Cool, just checking, just checking.", "action":"exitR"
               }
             }
           ]

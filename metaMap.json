@@ -174,7 +174,7 @@
             {
               "text":"I have survival instincts. No thanks.", "event":
               {
-                "text":"Oh. Okay then.", "action":"exitL"
+                "text":"Oh. Okay then.", "action":"exitD"
               }
             }
           ]
@@ -195,7 +195,7 @@
             {
               "text":"Yeah, I'm staying, he seems cool.", "event":
               {
-                "text":"You.. foolhardishly stay... ", "action":"moveMap", "arg":"map4", "x":6, "y":10
+                "text":"You.. foolhardishly stay... ", "action":"exitU"
               }
             },
             {

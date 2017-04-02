@@ -7,8 +7,7 @@
       [
         {
 
-          "x":8, "y":5, "text":"Ahead of you is a large open room, a part of a larger keep semingly untuched by time. Do You want to enter?", "alternativ":
-          [
+          "x":8, "y":5, "text":"Ahead of you is a large open room, a part of a larger keep seemingly untouched by time. Do You want to enter?", "alternativ":          [
             {
               "text":"Yes, how have this keep been preserved so well?", "event":
                 {
@@ -160,8 +159,28 @@
               }
             }
           ]
+        },
+
+        {
+          "x":6, "y":0, "text":"A smaller chamber lies ahead, slightly threatening, do you enter?", "alternativ":
+          [
+            {
+              "text":"I have no survival instincts, bring it on.", "event":
+                {
+                  "text":"The room is a lot less.. grand it seems... ", "action":"moveMap", "arg":"map4", "x":6, "y":10
+                }
+            },
+            {
+              "text":"I have survival instincts. No thanks.", "event":
+              {
+                "text":"Oh. Okay then.", "action":"exitL"
+              }
+            }
+          ]
+
         }
       ],
+
 
       "url":"karta3.json"
     },

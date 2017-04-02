@@ -18,6 +18,7 @@ var game = function(canvas, world, images){
   this.activeMap = this.mapObjs["map1"];
   console.log("active map is " + this.activeMap.name)
   console.dir(this.mapObjs);
+  this.item = {x:6, y:4}
 
   requestAnimationFrame(this.frame.bind(this)); // start the first frame
 }
@@ -29,6 +30,10 @@ game.prototype.changeMap = function (mapName)
   this.activeMap = map;
   this.player.map = map;
   this.activeMap.addGestalt(this.player);
+  if(mapName == "map4")
+  {
+    this.activeMap.addItem(this.item);
+  }
 }
 
 game.prototype.frame = function ()

@@ -390,7 +390,7 @@ var color = "";
     }
     if(color){
       this.ctx.fillStyle = color;
-      this.ctx.fillRect((x*this.tileSize)+1, (y*this.tileSize)+1, this.tileSize-1, this.tileSize-1);
+      this.ctx.fillRect((x*this.tileSize), (y*this.tileSize), this.tileSize, this.tileSize);
       }
 
     else {

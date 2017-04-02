@@ -156,7 +156,7 @@
             {
               "text":"Wait, isn't that dialouge?", "event":
               {
-                "text":".", "action":"exitL"
+                "text":".", "action":"exitR"
               }
             }
           ]

@@ -87,7 +87,7 @@
       "events":
       [
         {
-          "x":3, "y":5, "text":"Leaving already?", "alternativ":
+          "x":1, "y":5, "text":"Leaving already?", "alternativ":
           [
             {
               "text":"Yeah, just need some fresh air :)", "event":
@@ -102,7 +102,23 @@
               }
             }
           ]
-
+        },
+        {
+          "x":14, "y":4, "text":"Bing bong! Not dialouge, just an elevator!", "alternativ":
+          [
+            {
+              "text":"Okay! Going down!", "event":
+              {
+                "text":"Third floor!", "action":"moveMap", "arg":"map3", "x":13, "y":4
+              }
+            },
+            {
+              "text":"Wait, isn't that dialouge?", "event":
+              {
+                "text":".", "action":"exitL"
+              }
+            }
+          ]
         }
       ],
       "url":"karta2.json"
@@ -124,6 +140,23 @@
               "text":"Code: map4", "event":
               {
                 "text":"........ well, have a nice trip i guesss. Your adventure continues.....", "action":"moveMap", "arg":"map4", "x":2, "y":5
+              }
+            }
+          ]
+        },
+        {
+          "x":14, "y":4, "text":"Bing bong! Not dialouge, just an elevator!", "alternativ":
+          [
+            {
+              "text":"Okay! Going up!", "event":
+              {
+                "text":"Third floor!", "action":"moveMap", "arg":"map2", "x":13, "y":4
+              }
+            },
+            {
+              "text":"Wait, isn't that dialouge?", "event":
+              {
+                "text":".", "action":"exitL"
               }
             }
           ]
